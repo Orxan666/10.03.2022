@@ -1,0 +1,177 @@
+#header {
+    .top-header {
+        width: 100%;
+        background-color: #264653;
+        .fols{
+            display: flex;
+            flex-wrap: wrap;
+            .top-left {
+                width: 20%;
+                span {
+                    position: relative;
+                    padding: 15px 0;
+                    display: inline-block;
+                    &:hover {
+                        ul {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateY(0);
+                        }
+                    }
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }
+                    ul {
+                        position: absolute;
+                        top: 100%;
+                        background-color: #264653;
+                        margin: 0%;
+                        padding: 14px 0;
+                        width: 100%;
+                        opacity: 0;
+                        transition: 0.3s ease-in-out;
+                        visibility: hidden;
+                        transform: translateY(10px);
+                        text-align: center;
+                        li {
+                            a {
+                                display: inline-block;
+                                color: gold;
+                            }
+                        }
+                    }
+                }
+            }
+            .top-right{
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    justify-content: center;
+                    li{
+                        margin: 0 10px;
+                        a{
+                            color: white;
+                            text-decoration: none;
+                            i{
+                                margin-right: 5px;
+                                color: gold;
+                            }
+                        }
+                
+                    }
+                }
+            }
+        }
+   
+    }
+    // top-header end
+    // ----------------
+    // bottom-header start
+    .bottom-header{
+        background-color: whitesmoke;
+        .logo{
+            width: 15%;
+        }
+        .menu{
+            width: 60%;
+            ul{
+                margin: 0%;
+                padding: 0%;
+                li{
+                    a{
+                        padding: 40px 20px;
+                        display: block;
+                        color: grey;
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        font-size: 20px;
+                        font-weight: bold;
+                        text-decoration: none   ;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 0%;
+                            left: 0%;
+                            width: 100%;
+                            height: 4px;
+                            opacity: 0;
+                            background-color: orange;
+
+
+                        }
+                        &:hover{
+                            background-color: rgb(206, 241, 107);
+                       &::before{
+                           opacity: 1;
+                       }
+                        }
+                    }
+                }
+            }
+        }
+        .consul{
+            width: 25%;
+            display: flex;
+            justify-content: flex-end;
+            a{
+                background-color: #264653 ;
+                display: inline-block;
+                padding: 10px 25px;
+                text-decoration: none;
+                font-size: 17px;
+                color: #fff;
+                border-radius: 8mm;
+            }
+        }
+    }
+}
+// header end
+
+// section best start
+.best{
+    padding: 4rem 0;
+
+}
+@media (max-width:576px){
+    #header{
+        .top-header{
+            position: relative;
+
+          width: 100%;
+            .top-left{
+
+                width: 100%;
+                position: relative;
+                left: 50%;
+
+                transform: translateX(-50%);
+         
+            }
+            .top-right{
+                ul{
+                    li{
+                        border-bottom: 1px solid white;
+                        padding: 10px 0;
+                        &.first-text{
+                            width: 100%;
+                            text-align: center;
+                            padding: 20px 0;
+                            border-bottom: 1px solid white;
+        
+                        }
+                    
+                    }
+                }
+             
+            }
+        }
+        .bottom-header{
+            width: 100%;
+        display: none;
+          
+        }
+ 
+    }
+    
+}
